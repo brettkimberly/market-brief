@@ -1,0 +1,6 @@
+anthropic>=0.80.0
+yfinance>=0.2.65
+schwab-py>=1.5.1
+feedparser>=6.0.0
+requests>=2.32.0
+python-dotenv>=1.0.0

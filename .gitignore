@@ -1,0 +1,26 @@
+# Credentials — never commit these
+.env
+token.json
+
+# Logs and output
+*.log
+preview.html
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+# Mac-specific runner (has local paths)
+run.sh
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
