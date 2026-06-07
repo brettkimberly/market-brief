@@ -32,6 +32,8 @@ SCHWAB_SECRET     = os.environ.get("SCHWAB_SECRET", "")
 SCHWAB_CALLBACK   = os.environ.get("SCHWAB_CALLBACK", "https://127.0.0.1:8182")
 SCHWAB_TOKEN_PATH = os.environ.get("SCHWAB_TOKEN_PATH", "./token.json")
 
+CLAUDE_MODEL      = os.environ.get("CLAUDE_MODEL", "claude-opus-4-5")
+
 CST = ZoneInfo("America/Chicago")
 
 WATCH_LIST = [
@@ -308,7 +310,7 @@ def synthesize(prompt, data):
         return "[ANTHROPIC_API_KEY not configured]"
     try:
         msg = _ai.messages.create(
-            model="claude-opus-4-8",
+            model=CLAUDE_MODEL,
             max_tokens=512,
             system=_RULES,
             messages=[{
